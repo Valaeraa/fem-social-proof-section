@@ -1,0 +1,28 @@
+{
+  "name": "fem-social-proof-section",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch src/scss/main.scss:src/css/main.css",
+    "build:css": "sass src/scss/main.scss dist/css/main.css --style compressed && postcss dist/css/main.css --use autoprefixer --output dist/css/main.css",
+    "build:assets": "xcopy /E /I src\\assets dist\\assets",
+    "build:html": "html-minifier --collapse-whitespace --remove-comments --output dist/index.html src/index.html",
+    "build:images": "imagemin --out-dir=dist\\assets\\images src\\assets\\images\\*",
+    "build": "npm run build:css && npm run build:assets && npm run build:html && npm run build:images"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "html-minifier": "^4.0.0",
+    "imagemin": "^9.0.0",
+    "imagemin-cli": "^8.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-svgo": "^11.0.0",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.2"
+  }
+}

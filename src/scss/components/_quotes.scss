@@ -1,0 +1,65 @@
+.quotes {
+  display: grid;
+  gap: 1.25em;
+  margin-bottom: 1.5em;
+
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  @media (min-width: $bp-laptop) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+}
+
+.quote-card {
+  padding: 2.5em 2.5em;
+  background-color: var(--clr-primary-700);
+  color: var(--clr-neutral-100);
+  border-radius: 0.5em;
+  position: relative;
+}
+
+@media (min-width: $bp-desktop) {
+  .quote-card {
+    margin-bottom: 6em;
+  }
+  .quote-card:nth-child(2) {
+    top: 1.5em;
+  }
+
+  .quote-card:nth-child(3) {
+    top: 3em;
+  }
+}
+
+.quote-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.quote-avatar {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.quoter-user {
+  font-weight: var(--fw-extra-bold);
+  font-size: var(--fs-300);
+}
+
+.verified-buyer {
+  color: var(--clr-primary-300);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+}
+
+.quote-body {
+  font-size: var(--fs-300);
+}
